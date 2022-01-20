@@ -2,6 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Social } from '../Social';
 
 export const Header = () => {
   return (
@@ -29,6 +30,8 @@ export const Header = () => {
             <a>CONTACTS</a>
           </Link>
         </div>
+
+        <Social />
       </div>
     </StyledHeader>
   );
