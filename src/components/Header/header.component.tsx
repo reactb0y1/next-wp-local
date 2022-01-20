@@ -39,8 +39,13 @@ export const Header = () => {
 
 const StyledHeader = styled.header`
   height: 189px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   .container {
+    width: 1290px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;

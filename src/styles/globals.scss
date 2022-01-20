@@ -49,15 +49,8 @@ a:hover, a:active  {
 }
 
 :root {
-  --widthContent: 1100px;
+  --widthContent: 1290px;
 }
-
-.container {
-  max-width: var(--widthContent) !important;
-  width: 90% !important;
-  margin: 0 auto;
-}
-
 a {
   color: inherit;
   text-decoration: none;
