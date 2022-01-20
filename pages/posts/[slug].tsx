@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { getPost, getSlugs } from '../../utils/wordpress';
+import { getPost, getSlugs } from '../../src/utils/wordpress';
 
 export default function PostPage({ post }) {
   return (

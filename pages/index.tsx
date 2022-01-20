@@ -1,7 +1,7 @@
 import Head from 'next/head';
-import { getEvents, getPosts } from '../utils/wordpress';
-import Post from '../components/Post';
-import Event from '../components/Event';
+import { getEvents, getPosts } from '../src/utils/wordpress';
+import Post from '../src/components/_test/Post';
+import Event from '../src/components/_test/Event';
 
 export default function Home({ posts, events }) {
   const jsxPosts = posts.map((post) => <Post post={post} key={post.id} />);

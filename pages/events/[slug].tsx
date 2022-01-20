@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { getEvent, getSlugs } from '../../utils/wordpress';
+import { getEvent, getSlugs } from '../../src/utils/wordpress';
 
 export default function EventPage({ event }) {
   return (

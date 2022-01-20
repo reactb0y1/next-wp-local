@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { getDate } from '../utils/utils';
+import { getDate } from '../../utils/utils';
 
 export default function Post({ post }) {
   return (
