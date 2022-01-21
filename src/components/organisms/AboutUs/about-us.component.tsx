@@ -115,7 +115,7 @@ export const AboutUs = () => {
 
 const StyledAboutUs = styled.section`
   padding-top: 170px;
-  padding-botom: 70px;
+  padding-bottom: 70px;
 
   .head,
   .item {
@@ -163,6 +163,7 @@ const StyledAboutUs = styled.section`
     &.full {
       grid-template-columns: 1fr;
       grid-template-rows: auto auto;
+      gap: 117px;
 
       .text {
         order: -1;
@@ -206,7 +207,7 @@ const StyledAboutUs = styled.section`
       }
 
       & + p {
-        margin-top: 30px;
+        margin-top: 46px;
       }
     }
   }

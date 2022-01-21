@@ -98,8 +98,9 @@ export const Benefits = () => {
 const StyledBenefits = styled.section`
   padding-top: 70px;
   padding-bottom: 214px;
-  max-width: 1290px;
+  max-width: calc(1290px + 2 * var(--vertical-padding));
   margin: 0 auto;
+  overflow: hidden;
 
   .title {
     font-weight: normal;
@@ -113,7 +114,12 @@ const StyledBenefits = styled.section`
   .list {
     display: flex;
     flex-direction: column;
-    gap: 100px;
+    gap: 200px;
+  }
+
+  .img-wrap {
+    transform: scale(1.25);
+    transform-origin: right;
   }
 
   .item {
@@ -128,11 +134,16 @@ const StyledBenefits = styled.section`
       & > *:last-child {
         margin-left: auto;
       }
-    }
-  }
 
-  .img-wrap {
-    .image {
+      .img-wrap {
+        transform-origin: left;
+      }
+    }
+
+    &.full {
+      .img-wrap {
+        transform: scale(1.25) translateY(-70px);
+      }
     }
   }
 
@@ -149,7 +160,7 @@ const StyledBenefits = styled.section`
       font-size: 40px;
       line-height: 137%;
       color: var(--c-primary);
-      margin-bottom: 70px;
+      margin-bottom: 57px;
     }
 
     p {
