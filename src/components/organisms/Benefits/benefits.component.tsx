@@ -100,7 +100,6 @@ const StyledBenefits = styled.section`
   padding-bottom: 214px;
   max-width: calc(1290px + 2 * var(--vertical-padding));
   margin: 0 auto;
-  overflow: hidden;
 
   .title {
     font-weight: normal;
@@ -206,5 +205,9 @@ const StyledBenefits = styled.section`
         font-size: 16px;
       }
     }
+  }
+
+  @media (max-width: 1200px) {
+    overflow: hidden;
   }
 `;

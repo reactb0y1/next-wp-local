@@ -14,8 +14,9 @@ export const Banner = () => {
 };
 
 const StyledBanner = styled.section`
-  height: 100vh;
-  max-height: 1020px;
+  max-height: max(1020px, 100vh);
+  padding-top: 50px;
+  padding-bottom: 50px;
   background-image: url('/banner.jpg');
   background-position: center;
   background-size: cover;
