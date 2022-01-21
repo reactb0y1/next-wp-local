@@ -41,6 +41,7 @@ const StyledBanner = styled.section`
     letter-spacing: 0.035em;
     color: #ffffff;
     max-width: 877px;
+    text-shadow: 0 -1px 3px hsla(0, 0%, 0%, 0.5);
   }
 
   @media (max-width: 1200px) {

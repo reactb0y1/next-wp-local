@@ -119,6 +119,10 @@ const StyledBenefits = styled.section`
     @media (max-width: 1200px) {
       gap: 100px;
     }
+
+    @media (max-width: 750px) {
+      gap: 50px;
+    }
   }
 
   .img-wrap {
@@ -172,6 +176,10 @@ const StyledBenefits = styled.section`
     display: flex;
     flex-direction: column;
     gap: 130px;
+
+    @media (max-width: 750px) {
+      gap: 70px;
+    }
   }
 
   .text {
@@ -182,12 +190,21 @@ const StyledBenefits = styled.section`
       line-height: 137%;
       color: var(--c-primary);
       margin-bottom: 57px;
+
+      @media (max-width: 750px) {
+        font-size: 20px;
+        margin-bottom: 20px;
+      }
     }
 
     p {
       font-weight: 500;
       font-size: 24px;
       line-height: 156.5%;
+
+      @media (max-width: 750px) {
+        font-size: 16px;
+      }
     }
   }
 `;

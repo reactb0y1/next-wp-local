@@ -156,6 +156,10 @@ const StyledAboutUs = styled.section`
     display: flex;
     flex-direction: column;
     gap: 100px;
+
+    @media (max-width: 750px) {
+      gap: 50px;
+    }
   }
 
   .item {
@@ -188,6 +192,10 @@ const StyledAboutUs = styled.section`
           line-height: 156.5%;
           text-align: center;
           color: var(--c-primary);
+
+          @media (max-width: 750px) {
+            font-size: 22px;
+          }
         }
       }
 
@@ -198,12 +206,20 @@ const StyledAboutUs = styled.section`
           border-radius: 800px;
         }
       }
+
+      @media (max-width: 750px) {
+        gap: 70px;
+      }
     }
   }
 
   .img-wrap {
     .image {
       border-radius: 86px;
+
+      @media (max-width: 750px) {
+        border-radius: 0;
+      }
     }
 
     @media (max-width: 1200px) {
@@ -226,10 +242,19 @@ const StyledAboutUs = styled.section`
       & + p {
         margin-top: 46px;
       }
+
+      @media (max-width: 750px) {
+        font-size: 16px;
+      }
     }
 
     @media (max-width: 1200px) {
       max-width: none;
     }
+  }
+
+  @media (max-width: 750px) {
+    padding-top: 100px;
+    padding-bottom: 50px;
   }
 `;
