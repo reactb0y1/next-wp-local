@@ -1,11 +1,13 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import { DownloadApp } from '../DownloadApp';
 
 export const Banner = () => {
   return (
     <StyledBanner className={'banner'}>
       <div className='container'>
         <h1 className={'title'}>BE GREAT AT GIFTING IN 2 MINUTES!</h1>
+        <DownloadApp />
       </div>
     </StyledBanner>
   );
@@ -25,8 +27,10 @@ const StyledBanner = styled.section`
     width: 1290px;
     margin: 0 auto;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
+    flex-direction: column;
+    gap: 88px;
   }
 
   .title {
