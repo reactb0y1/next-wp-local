@@ -33,6 +33,6 @@ const StyledSocial = styled.div`
 
   a {
     display: flex;
-    fill: #515bdf;
+    fill: var(--c-primary);
   }
 `;

@@ -105,7 +105,7 @@ const StyledBenefits = styled.section`
     font-size: 18px;
     line-height: 105%;
     letter-spacing: 0.035em;
-    color: #505be0;
+    color: var(--c-primary);
     margin-bottom: 68px;
   }
 
@@ -147,7 +147,7 @@ const StyledBenefits = styled.section`
       font-weight: bold;
       font-size: 40px;
       line-height: 137%;
-      color: #515bdf;
+      color: var(--c-primary);
       margin-bottom: 70px;
     }
 

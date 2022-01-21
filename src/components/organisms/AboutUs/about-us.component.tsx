@@ -131,7 +131,7 @@ const StyledAboutUs = styled.section`
       font-size: 18px;
       line-height: 105%;
       letter-spacing: 0.035em;
-      color: #505be0;
+      color: var(--c-primary);
       margin: auto;
     }
 
@@ -139,7 +139,7 @@ const StyledAboutUs = styled.section`
       font-weight: bold;
       font-size: 55px;
       line-height: 156.5%;
-      color: #515bdf;
+      color: var(--c-primary);
     }
   }
 
@@ -173,7 +173,7 @@ const StyledAboutUs = styled.section`
           font-size: 34px;
           line-height: 156.5%;
           text-align: center;
-          color: #515bdf;
+          color: var(--c-primary);
         }
       }
 
@@ -201,7 +201,7 @@ const StyledAboutUs = styled.section`
       line-height: 156.5%;
 
       &.active {
-        color: #515bdf;
+        color: var(--c-primary);
       }
 
       & + p {

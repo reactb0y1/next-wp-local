@@ -61,7 +61,7 @@ const StyledHeader = styled.header`
         font-weight: bold;
         font-size: 20px;
         line-height: 135%;
-        color: #515bdf;
+        color: var(--c-primary);
       }
     }
   }
