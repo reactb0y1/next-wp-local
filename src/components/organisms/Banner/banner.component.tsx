@@ -14,7 +14,8 @@ export const Banner = () => {
 };
 
 const StyledBanner = styled.section`
-  height: 1020px;
+  height: 100vh;
+  max-height: 1020px;
   background-image: url('/banner.jpg');
   background-position: center;
   background-size: cover;
@@ -35,10 +36,14 @@ const StyledBanner = styled.section`
 
   .title {
     font-weight: normal;
-    font-size: 100px;
+    font-size: clamp(30px, 100 / 1200 * 100vw, 100px);
     line-height: 105%;
     letter-spacing: 0.035em;
     color: #ffffff;
     max-width: 877px;
+  }
+
+  @media (max-width: 1200px) {
+    background-position: 70%;
   }
 `;

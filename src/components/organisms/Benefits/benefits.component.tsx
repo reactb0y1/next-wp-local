@@ -115,11 +115,20 @@ const StyledBenefits = styled.section`
     display: flex;
     flex-direction: column;
     gap: 200px;
+
+    @media (max-width: 1200px) {
+      gap: 100px;
+    }
   }
 
   .img-wrap {
     transform: scale(1.25);
     transform-origin: right;
+
+    @media (max-width: 1200px) {
+      height: min(500px, 100vw);
+      transform: none;
+    }
   }
 
   .item {
@@ -130,6 +139,10 @@ const StyledBenefits = styled.section`
     &.reverse {
       & > *:first-child {
         order: 1;
+
+        @media (max-width: 1200px) {
+          order: initial;
+        }
       }
       & > *:last-child {
         margin-left: auto;
@@ -143,7 +156,15 @@ const StyledBenefits = styled.section`
     &.full {
       .img-wrap {
         transform: scale(1.25) translateY(-70px);
+
+        @media (max-width: 1200px) {
+          transform: none;
+        }
       }
+    }
+
+    @media (max-width: 1200px) {
+      grid-template-columns: 1fr;
     }
   }
 

@@ -122,6 +122,10 @@ const StyledAboutUs = styled.section`
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 67px;
+
+    @media (max-width: 1200px) {
+      grid-template-columns: 1fr;
+    }
   }
 
   .head {
@@ -141,6 +145,10 @@ const StyledAboutUs = styled.section`
       font-size: 55px;
       line-height: 156.5%;
       color: var(--c-primary);
+
+      @media (max-width: 1200px) {
+        text-align: center;
+      }
     }
   }
 
@@ -154,6 +162,10 @@ const StyledAboutUs = styled.section`
     &.reverse {
       & > *:first-child {
         order: 1;
+
+        @media (max-width: 1200px) {
+          order: initial;
+        }
       }
       & > *:last-child {
         margin-left: auto;
@@ -193,10 +205,15 @@ const StyledAboutUs = styled.section`
     .image {
       border-radius: 86px;
     }
+
+    @media (max-width: 1200px) {
+      height: min(500px, 100vw);
+    }
   }
 
   .text {
     max-width: 630px;
+
     p {
       font-weight: 500;
       font-size: 24px;
@@ -209,6 +226,10 @@ const StyledAboutUs = styled.section`
       & + p {
         margin-top: 46px;
       }
+    }
+
+    @media (max-width: 1200px) {
+      max-width: none;
     }
   }
 `;
