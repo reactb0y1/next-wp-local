@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { Icon } from '../Icon';
+import { Icon } from '../../atoms/Icon';
 import Link from 'next/link';
 
 export const Social = () => {

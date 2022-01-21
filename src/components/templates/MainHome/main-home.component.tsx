@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { Banner } from '../Banner';
+import { Banner } from '../../organisms/Banner';
 
 export const MainHome = () => {
   return (

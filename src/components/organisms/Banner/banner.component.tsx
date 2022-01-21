@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { DownloadApp } from '../DownloadApp';
+import { DownloadApp } from '../../molecules/DownloadApp';
 
 export const Banner = () => {
   return (

@@ -1,7 +1,7 @@
 import React from 'react';
-import { ReactComponent as FB } from '../../assets/images/fb.svg';
-import { ReactComponent as Twitter } from '../../assets/images/twitter.svg';
-import { ReactComponent as Instagram } from '../../assets/images/instagram.svg';
+import { ReactComponent as FB } from '../../../assets/images/fb.svg';
+import { ReactComponent as Twitter } from '../../../assets/images/twitter.svg';
+import { ReactComponent as Instagram } from '../../../assets/images/instagram.svg';
 
 type ComponentSvg = React.FC<React.SVGProps<SVGSVGElement>>;
 
