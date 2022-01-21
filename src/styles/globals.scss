@@ -66,3 +66,18 @@ a {
 .main {
   flex: 1;
 }
+
+header, section, footer {
+  padding-left: 56px;
+  padding-right: 56px;
+
+  @media (max-width: 1200px) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @media (max-width: 750px) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}

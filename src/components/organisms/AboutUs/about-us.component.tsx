@@ -114,7 +114,8 @@ export const AboutUs = () => {
 };
 
 const StyledAboutUs = styled.section`
-  padding: 170px 56px 70px;
+  padding-top: 170px;
+  padding-botom: 70px;
 
   .head,
   .item {

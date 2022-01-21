@@ -96,7 +96,8 @@ export const Benefits = () => {
   );
 };
 const StyledBenefits = styled.section`
-  padding: 70px 0 214px;
+  padding-top: 70px;
+  padding-bottom: 214px;
   max-width: 1290px;
   margin: 0 auto;
 
