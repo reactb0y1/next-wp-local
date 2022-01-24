@@ -37,6 +37,7 @@ const StyledSubscribe = styled.form`
     font-size: 20px;
     line-height: 200%;
     color: var(--c-primary);
+    padding-right: 50px;
   }
 
   .button {

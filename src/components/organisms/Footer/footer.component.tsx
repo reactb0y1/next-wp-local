@@ -59,9 +59,8 @@ const StyledFooter = styled.footer`
 
   .container {
     display: grid;
-    grid-template-columns: 300px repeat(4, minmax(0, 1fr));
+    grid-template-columns: 340px repeat(4, minmax(0, 1fr));
     grid-template-rows: repeat(3, auto);
-    row-gap: 20px;
     column-gap: 100px;
     width: 1290px;
     margin: 0 auto;
@@ -83,6 +82,11 @@ const StyledFooter = styled.footer`
     .title {
       margin-bottom: 64px;
     }
+
+    .links a {
+      max-width: 270px;
+      max-height: 75px;
+    }
   }
 
   .menu {
@@ -90,7 +94,8 @@ const StyledFooter = styled.footer`
     grid-area: auto / span 4;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     row-gap: 20px;
-    column-gap: 100px;
+    column-gap: 30px;
+    margin-bottom: 45px;
 
     li > a {
       margin-bottom: 30px;
@@ -111,10 +116,16 @@ const StyledFooter = styled.footer`
   }
 
   .social {
-    grid-area: 2 / -2 / -2 / -1;
+    grid-area: 2 / -3 / -2 / -1;
+    margin: 0 0 auto auto;
+    width: 190px;
 
     .title {
       margin-bottom: 38px;
+    }
+
+    .links {
+      width: 130px;
     }
   }
 
@@ -123,5 +134,6 @@ const StyledFooter = styled.footer`
     font-size: 12px;
     line-height: 146.4%;
     color: var(--c-primary);
+    margin-top: 60px;
   }
 `;
