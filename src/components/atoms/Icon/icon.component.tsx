@@ -3,6 +3,7 @@ import { ReactComponent as FB } from '../../../assets/images/fb.svg';
 import { ReactComponent as Twitter } from '../../../assets/images/twitter.svg';
 import { ReactComponent as Instagram } from '../../../assets/images/instagram.svg';
 import { ReactComponent as Arrow } from '../../../assets/images/arrow.svg';
+import { ReactComponent as ArrowBig } from '../../../assets/images/arrow-big.svg';
 
 type ComponentSvg = React.FC<React.SVGProps<SVGSVGElement>>;
 
@@ -16,13 +17,14 @@ type IconVariantComponents = {
   [T in IconVariant]: ComponentSvg;
 };
 
-export type IconVariant = 'fb' | 'twitter' | 'instagram' | 'arrow';
+export type IconVariant = 'fb' | 'twitter' | 'instagram' | 'arrow' | 'arrow-big';
 
 const variantComponents: IconVariantComponents = {
   fb: FB,
   twitter: Twitter,
   instagram: Instagram,
   arrow: Arrow,
+  'arrow-big': ArrowBig,
 };
 
 export const Icon = (props: IProps) => {
