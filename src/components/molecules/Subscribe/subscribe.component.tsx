@@ -27,7 +27,7 @@ const StyledSubscribe = styled.form`
   }
 
   .input-wrap {
-    width: 330px;
+    width: min(100%, 330px);
   }
 
   .input {

@@ -55,15 +55,28 @@ export const Footer = () => {
 
 const StyledFooter = styled.footer`
   border-top: 1px solid var(--c-primary);
-  padding: 67px 0 47px;
+  padding-top: 67px;
+  padding-bottom: 47px;
 
   .container {
     display: grid;
     grid-template-columns: 340px repeat(4, minmax(0, 1fr));
     grid-template-rows: repeat(3, auto);
     column-gap: 100px;
-    width: 1290px;
+    max-width: 1290px;
+    width: 100%;
     margin: 0 auto;
+
+    @media (max-width: 1200px) {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    @media (max-width: 750px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: initial;
+      gap: 30px;
+    }
   }
 
   .menu li > a,
@@ -81,11 +94,27 @@ const StyledFooter = styled.footer`
 
     .title {
       margin-bottom: 64px;
+
+      @media (max-width: 1200px) {
+        margin-bottom: 38px;
+      }
+
+      @media (max-width: 750px) {
+        margin-bottom: 20px;
+      }
     }
 
     .links a {
       max-width: 270px;
       max-height: 75px;
+    }
+
+    @media (max-width: 1200px) {
+      grid-area: span 2 / span 2;
+    }
+
+    @media (max-width: 750px) {
+      grid-area: initial;
     }
   }
 
@@ -97,22 +126,43 @@ const StyledFooter = styled.footer`
     column-gap: 30px;
     margin-bottom: 45px;
 
-    li > a {
-      margin-bottom: 30px;
-    }
-
     .sub-menu {
+      margin-top: 30px;
       font-weight: normal;
       font-size: 20px;
       line-height: 200%;
       color: var(--c-primary);
       display: flex;
       flex-direction: column;
+
+      @media (max-width: 750px) {
+        margin-top: 10px;
+      }
+    }
+
+    @media (max-width: 1200px) {
+      order: -1;
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 750px) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-area: initial;
+      margin: 0;
+      column-gap: 10px;
+    }
+
+    @media (max-width: 450px) {
+      grid-template-columns: 1fr;
     }
   }
 
   .subscribe {
     grid-area: auto / span 2;
+
+    @media (max-width: 750px) {
+      grid-area: initial;
+    }
   }
 
   .social {
@@ -122,10 +172,19 @@ const StyledFooter = styled.footer`
 
     .title {
       margin-bottom: 38px;
+
+      @media (max-width: 750px) {
+        margin-bottom: 20px;
+      }
     }
 
     .links {
       width: 130px;
+    }
+
+    @media (max-width: 750px) {
+      grid-area: initial;
+      margin: 0;
     }
   }
 
@@ -135,5 +194,15 @@ const StyledFooter = styled.footer`
     line-height: 146.4%;
     color: var(--c-primary);
     margin-top: 60px;
+
+    @media (max-width: 1200px) {
+      grid-area: initial;
+      order: 5;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 750px) {
+      margin: 0;
+    }
   }
 `;
