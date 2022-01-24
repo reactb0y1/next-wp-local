@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useCallback, useState } from 'react';
 import styled from '@emotion/styled';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Social } from '../../molecules/Social';
+import { HamburgerCollapse } from 'react-animated-burgers';
+import { useMediaQuery } from 'react-responsive';
 
 export const Header = () => {
+  const [menuIsOpen, setMenuIsOpen] = useState(false);
+  const toggleButton = useCallback(() => setMenuIsOpen((prevState) => !prevState), []);
+  const media = useMediaQuery({ query: '(max-width: 1200px)' });
+
   return (
     <StyledHeader className={'header'}>
       <div className='container'>
@@ -15,6 +21,14 @@ export const Header = () => {
             </a>
           </Link>
         </div>
+
+        {media && (
+          <HamburgerCollapse
+            isActive={menuIsOpen}
+            toggleButton={toggleButton}
+            barColor={'#515bdf'}
+          />
+        )}
 
         <div className='menu'>
           <Link href={'/about'}>
