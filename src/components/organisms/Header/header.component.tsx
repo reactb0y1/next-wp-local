@@ -2,7 +2,7 @@ import React, { useCallback, useState } from 'react';
 import styled from '@emotion/styled';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Social } from '../../molecules/Social';
+import { HeaderMenu } from '../../molecules/HeaderMenu';
 import { HamburgerCollapse } from 'react-animated-burgers';
 import { useMediaQuery } from 'react-responsive';
 
@@ -30,22 +30,7 @@ export const Header = () => {
           />
         )}
 
-        <div className='menu'>
-          <Link href={'/about'}>
-            <a>ABOUT US</a>
-          </Link>
-          <Link href={'/faq'}>
-            <a>FAQs</a>
-          </Link>
-          <Link href={'/support'}>
-            <a>SUPPORT</a>
-          </Link>
-          <Link href={'/contacts'}>
-            <a>CONTACTS</a>
-          </Link>
-        </div>
-
-        <Social />
+        {!media && <HeaderMenu />}
       </div>
     </StyledHeader>
   );
