@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import { DownloadApp } from '../../molecules/DownloadApp';
 import { Social } from '../../molecules/Social';
 import Link from 'next/link';
+import { Subscribe } from '../../molecules/Subscribe';
 
 export const Footer = () => {
   return (
@@ -44,7 +45,7 @@ export const Footer = () => {
             </div>
           </li>
         </ul>
-        <div className='subscribe'>Subscribe</div>
+        <Subscribe />
         <Social title={'Social Media'} />
         <p className='copyright'>© GIVVY 2022</p>
       </div>

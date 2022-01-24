@@ -51,7 +51,9 @@ a:hover, a:active  {
 :root {
   --widthContent: 1290px;
   --c-primary: #515bdf;
+  --c-primary-transparent: #515bdf88;
   --vertical-padding: 56px;
+  --transition: 250ms;
 }
 
 a {
@@ -79,5 +81,11 @@ header, section, footer {
 
   @media (max-width: 750px) {
     --vertical-padding: 15px;
+  }
+}
+
+input {
+  &::placeholder {
+    color: var(--c-primary-transparent);
   }
 }
