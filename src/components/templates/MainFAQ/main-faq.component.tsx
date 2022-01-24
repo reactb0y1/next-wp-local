@@ -79,7 +79,7 @@ export const MainFAQ = () => {
 
 const StyledMainFAQ = styled.main`
   width: 100%;
-  max-width: 1290px;
+  max-width: calc(1290px + 2 * var(--vertical-padding));
   margin: 0 auto;
 
   .banner {
@@ -98,13 +98,13 @@ const StyledMainFAQ = styled.main`
     .img-wrap {
       position: absolute;
       bottom: 0;
-      right: 0;
+      right: -64px;
       z-index: -1;
       max-width: 100%;
     }
 
     .icon {
-      width: 50px;
+      width: 80px;
       fill: var(--c-primary);
       position: absolute;
       bottom: 0;
@@ -113,12 +113,15 @@ const StyledMainFAQ = styled.main`
   }
 
   .list-section {
+    padding-top: 96px;
+    padding-bottom: 144px;
+
     .list {
       .item {
         display: grid;
-        grid-template-columns: 400px 1fr;
+        grid-template-columns: 360px 1fr;
         gap: 80px;
-        padding: 75px 0 84px;
+        padding: 70px 0;
         border-bottom: 1px solid #ffc107;
 
         .title {
@@ -149,7 +152,13 @@ const StyledMainFAQ = styled.main`
           border-bottom: none;
 
           .question {
+            text-transform: initial;
             margin-bottom: 0;
+            font-size: 45px;
+          }
+
+          .answer {
+            font-size: 30px;
           }
         }
       }
