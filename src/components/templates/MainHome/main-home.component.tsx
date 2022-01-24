@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import { Banner } from '../../organisms/Banner';
 import { AboutUs } from '../../organisms/AboutUs';
 import { Benefits } from '../../organisms/Benefits';

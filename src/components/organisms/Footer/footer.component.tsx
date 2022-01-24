@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import { DownloadApp } from '../../molecules/DownloadApp';
 import { Social } from '../../molecules/Social';
 import Link from 'next/link';

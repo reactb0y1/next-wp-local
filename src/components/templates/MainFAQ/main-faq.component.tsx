@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import { Icon } from '../../atoms/Icon';
 import Image from 'next/image';
 
