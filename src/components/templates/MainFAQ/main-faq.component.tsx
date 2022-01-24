@@ -83,13 +83,13 @@ const StyledMainFAQ = styled.main`
   margin: 0 auto;
 
   .banner {
-    height: min(1020px, 100vh);
-    padding-top: 140px;
+    height: min(1020px, 100vw);
+    padding-top: clamp(50px, 140 / 1200 * 100vw, 140px);
 
     .title {
       font-style: normal;
       font-weight: normal;
-      font-size: 85px;
+      font-size: clamp(30px, 85 / 1200 * 100vw, 85px);
       line-height: 135%;
       color: var(--c-primary);
       max-width: 823px;
@@ -101,10 +101,14 @@ const StyledMainFAQ = styled.main`
       right: -64px;
       z-index: -1;
       max-width: 100%;
+
+      @media (max-width: 1200px) {
+        right: -20px;
+      }
     }
 
     .icon {
-      width: 80px;
+      width: clamp(30px, 80 / 1200 * 100vw, 80px);
       fill: var(--c-primary);
       position: absolute;
       bottom: 0;
@@ -113,20 +117,20 @@ const StyledMainFAQ = styled.main`
   }
 
   .list-section {
-    padding-top: 96px;
-    padding-bottom: 144px;
+    padding-top: clamp(50px, 96 / 1200 * 100vw, 96px);
+    padding-bottom: clamp(50px, 144 / 1200 * 100vw, 144px);
 
     .list {
       .item {
         display: grid;
         grid-template-columns: 360px 1fr;
-        gap: 80px;
-        padding: 70px 0;
+        gap: clamp(20px, 80 / 1200 * 100vw, 80px);
+        padding: clamp(20px, 70 / 750 * 100vw, 70px) 0;
         border-bottom: 1px solid #ffc107;
 
         .title {
           font-weight: normal;
-          font-size: 45px;
+          font-size: clamp(24px, 45 / 750 * 100vw, 45px);
           line-height: 156.5%;
           color: var(--c-primary);
         }
@@ -134,15 +138,15 @@ const StyledMainFAQ = styled.main`
         .content {
           .question {
             font-weight: bold;
-            font-size: 45px;
+            font-size: clamp(24px, 45 / 750 * 100vw, 45px);
             line-height: 156.5%;
             text-transform: uppercase;
             color: var(--c-primary);
-            margin-bottom: 45px;
+            margin-bottom: clamp(20px, 45 / 750 * 100vw, 45px);
           }
           .answer {
             font-weight: 500;
-            font-size: 24px;
+            font-size: clamp(16px, 24 / 750 * 100vw, 24px);
             line-height: 156.5%;
             color: var(--c-primary);
           }
@@ -154,12 +158,16 @@ const StyledMainFAQ = styled.main`
           .question {
             text-transform: initial;
             margin-bottom: 0;
-            font-size: 45px;
+            font-size: clamp(24px, 45 / 750 * 100vw, 45px);
           }
 
           .answer {
-            font-size: 30px;
+            font-size: clamp(20px, 30 / 750 * 100vw, 30px);
           }
+        }
+
+        @media (max-width: 1200px) {
+          grid-template-columns: 1fr;
         }
       }
     }
