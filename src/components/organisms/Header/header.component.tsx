@@ -2,9 +2,10 @@ import React, { useCallback, useState } from 'react';
 import styled from '@emotion/styled';
 import Image from 'next/image';
 import Link from 'next/link';
-import { HeaderMenu } from '../../molecules/HeaderMenu';
+import { HeaderMenu } from './header-menu.component';
 import { HamburgerCollapse } from 'react-animated-burgers';
 import { useMediaQuery } from 'react-responsive';
+import { slide as Menu } from 'react-burger-menu';
 
 export const Header = () => {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
@@ -22,6 +23,14 @@ export const Header = () => {
           </Link>
         </div>
 
+        {media ? (
+          <Menu isOpen={menuIsOpen} right>
+            <HeaderMenu />
+          </Menu>
+        ) : (
+          <HeaderMenu />
+        )}
+
         {media && (
           <HamburgerCollapse
             isActive={menuIsOpen}
@@ -29,8 +38,6 @@ export const Header = () => {
             barColor={'#515bdf'}
           />
         )}
-
-        {!media && <HeaderMenu />}
       </div>
     </StyledHeader>
   );

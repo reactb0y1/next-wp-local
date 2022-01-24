@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Social } from '../Social';
+import { Social } from '../../molecules/Social';
 
 export const HeaderMenu = () => {
   return (
