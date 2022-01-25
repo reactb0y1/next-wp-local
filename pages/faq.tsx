@@ -2,10 +2,10 @@ import React from 'react';
 import { MainFAQ } from '../src/components/templates/MainFAQ';
 import { Page } from '../src/components/templates/Page';
 
-export default function FAQ({ faq, last_item_in_faq }) {
+export default function FAQ({ acf }) {
   return (
     <Page title={'FAQ'}>
-      <MainFAQ faq={faq} last_item_in_faq={last_item_in_faq} />
+      <MainFAQ acf={acf} />
     </Page>
   );
 }
@@ -13,12 +13,11 @@ export default function FAQ({ faq, last_item_in_faq }) {
 export async function getStaticProps() {
   const postsRes = await fetch('http://next-wp-local/wp-json/acf/v3/pages/23');
   const posts = await postsRes.json();
-  const { faq, last_item_in_faq } = posts.acf;
+  const acf = posts.acf;
 
   return {
     props: {
-      faq,
-      last_item_in_faq,
+      acf,
     },
   };
 }

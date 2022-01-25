@@ -3,7 +3,9 @@ import styled from 'styled-components';
 import { Icon } from '../../atoms/Icon';
 import Image from 'next/image';
 
-export const MainFAQ = ({ faq, last_item_in_faq }) => {
+export const MainFAQ = ({ acf }) => {
+  const { faq, last_item_in_faq } = acf;
+
   return (
     <StyledMainFAQ className={'main'}>
       <section className={'banner'}>
