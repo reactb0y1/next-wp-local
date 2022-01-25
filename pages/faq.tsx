@@ -11,9 +11,9 @@ export default function FAQ({ acf }) {
 }
 
 export async function getStaticProps() {
-  const postsRes = await fetch('http://next-wp-local/wp-json/acf/v3/pages/23');
-  const posts = await postsRes.json();
-  const acf = posts.acf;
+  const page = await fetch('http://next-wp-local/wp-json/acf/v3/pages/23');
+  const pageJSON = await page.json();
+  const acf = pageJSON.acf;
 
   return {
     props: {
