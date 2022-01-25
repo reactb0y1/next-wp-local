@@ -5,11 +5,11 @@ import { AboutUs } from '../../organisms/AboutUs';
 import { Benefits } from '../../organisms/Benefits';
 
 export const MainHome = ({ acf }) => {
-  const { about_us, benefits } = acf;
+  const { about_us, benefits, banner } = acf;
 
   return (
     <main className={'main'}>
-      <Banner />
+      <Banner banner={banner} />
       <AboutUs about_us={about_us} />
       <Benefits benefits={benefits} />
     </main>

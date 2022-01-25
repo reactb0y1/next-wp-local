@@ -2,22 +2,19 @@ import React from 'react';
 import styled from 'styled-components';
 import { DownloadApp } from '../../molecules/DownloadApp';
 
-export const Banner = () => {
-  return (
-    <StyledBanner className={'banner'}>
-      <div className='container'>
-        <h1 className={'title'}>BE GREAT AT GIFTING IN 2 MINUTES!</h1>
-        <DownloadApp />
-      </div>
-    </StyledBanner>
-  );
-};
+export const Banner = ({ banner }) => (
+  <StyledBanner className={'banner'} style={{ 'background-image': `url('${banner.background}')` }}>
+    <div className='container'>
+      <h1 className={'title'}>{banner.title}</h1>
+      <DownloadApp />
+    </div>
+  </StyledBanner>
+);
 
 const StyledBanner = styled.section`
   max-height: max(1020px, 100vh);
   padding-top: 50px;
   padding-bottom: 50px;
-  background-image: url('/banner.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
