@@ -11,16 +11,16 @@ export const HeaderMenu = () => {
     <>
       <StyledMenu className='menu'>
         <Link href={'/about'}>
-          <a className={router.pathname === '/about' && 'active'}>ABOUT US</a>
+          <a className={router.pathname === '/about' ? 'active' : ''}>ABOUT US</a>
         </Link>
         <Link href={'/faq'}>
-          <a className={router.pathname === '/faq' && 'active'}>FAQs</a>
+          <a className={router.pathname === '/faq' ? 'active' : ''}>FAQs</a>
         </Link>
         <Link href={'/support'}>
-          <a className={router.pathname === '/support' && 'active'}>SUPPORT</a>
+          <a className={router.pathname === '/support' ? 'active' : ''}>SUPPORT</a>
         </Link>
         <Link href={'/contacts'}>
-          <a className={router.pathname === '/contacts' && 'active'}>CONTACTS</a>
+          <a className={router.pathname === '/contacts' ? 'active' : ''}>CONTACTS</a>
         </Link>
       </StyledMenu>
       <Social />

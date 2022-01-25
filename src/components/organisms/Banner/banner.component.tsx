@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { DownloadApp } from '../../molecules/DownloadApp';
 
 export const Banner = ({ banner }) => (
-  <StyledBanner className={'banner'} style={{ 'background-image': `url('${banner.background}')` }}>
+  <StyledBanner className={'banner'} style={{ backgroundImage: `url('${banner.background}')` }}>
     <div className='container'>
       <h1 className={'title'}>{banner.title}</h1>
       <DownloadApp />
