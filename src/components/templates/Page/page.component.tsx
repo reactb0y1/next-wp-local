@@ -8,7 +8,7 @@ export const Page = ({ children, title }) => {
     <>
       <Head>
         <title>Givvi landing {title ? ` | ${title}` : ''} </title>
-        <link rel='icon' href='/favicon.ico' />
+        <link rel='icon' href='/favicon.svg' />
       </Head>
 
       <div className={'global-wrap'}>
