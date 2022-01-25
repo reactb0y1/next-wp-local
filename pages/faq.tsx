@@ -1,21 +1,11 @@
-import Head from 'next/head';
-import { Header } from '../src/components/organisms/Header';
-import { Footer } from '../src/components/organisms/Footer';
+import React from 'react';
 import { MainFAQ } from '../src/components/templates/MainFAQ';
+import { Page } from '../src/components/templates/Page';
 
 export default function FAQ() {
   return (
-    <>
-      <Head>
-        <title>Givvi landing | FAQ</title>
-        <link rel='icon' href='/favicon.ico' />
-      </Head>
-
-      <div className={'global-wrap'}>
-        <Header />
-        <MainFAQ />
-        <Footer />
-      </div>
-    </>
+    <Page title={'FAQ'}>
+      <MainFAQ />
+    </Page>
   );
 }

@@ -1,21 +1,11 @@
-import Head from 'next/head';
-import { Header } from '../src/components/organisms/Header';
+import React from 'react';
 import { MainHome } from '../src/components/templates/MainHome';
-import { Footer } from '../src/components/organisms/Footer';
+import { Page } from '../src/components/templates/Page';
 
-export default function Home() {
+export default function Index() {
   return (
-    <>
-      <Head>
-        <title>Givvi landing</title>
-        <link rel='icon' href='/favicon.ico' />
-      </Head>
-
-      <div className={'global-wrap'}>
-        <Header />
-        <MainHome />
-        <Footer />
-      </div>
-    </>
+    <Page title={''}>
+      <MainHome />
+    </Page>
   );
 }
