@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Icon } from '../../atoms/Icon';
 import Image from 'next/image';
 
-export const MainFAQ = ({ faq }) => {
+export const MainFAQ = ({ faq, last_item_in_faq }) => {
   return (
     <StyledMainFAQ className={'main'}>
       <section className={'banner'}>
@@ -25,11 +25,11 @@ export const MainFAQ = ({ faq }) => {
             </li>
           ))}
           <li className={'item'}>
-            <p className='title'>Didn't Cover Your Question?</p>
+            <p className='title'>{last_item_in_faq.title}</p>
             <div className='content'>
-              <h2 className='question'>Email us at</h2>
-              <a href={'mailto:support@givvy'} className='answer'>
-                SUPPORT@GIVVY
+              <h2 className='question'>{last_item_in_faq.question}</h2>
+              <a href={`mailto:${last_item_in_faq.email}`} className='answer'>
+                {last_item_in_faq.email}
               </a>
             </div>
           </li>
@@ -111,6 +111,7 @@ const StyledMainFAQ = styled.main`
             font-size: clamp(16px, 24 / 750 * 100vw, 24px);
             line-height: 156.5%;
             color: var(--c-primary);
+            text-transform: uppercase;
           }
         }
 
