@@ -2,12 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 import Image from 'next/image';
 
-export const AboutUs = () => {
+export const AboutUs = ({ about_us }) => {
   return (
     <StyledAboutUs>
       <div className='head'>
-        <h2 className='title'>ABOUT US</h2>
-        <h3 className='sub-title'>What is Givvy?</h3>
+        <h2 className='title'>{about_us.header.section_name}</h2>
+        <h3 className='sub-title'>{about_us.header.title}</h3>
       </div>
 
       <ul className='list'>

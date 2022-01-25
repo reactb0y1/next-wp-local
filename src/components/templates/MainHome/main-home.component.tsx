@@ -4,14 +4,14 @@ import { Banner } from '../../organisms/Banner';
 import { AboutUs } from '../../organisms/AboutUs';
 import { Benefits } from '../../organisms/Benefits';
 
-export const MainHome = () => {
+export const MainHome = ({ acf }) => {
+  const { about_us } = acf;
+
   return (
-    <StyledMainHome className={'main'}>
+    <main className={'main'}>
       <Banner />
-      <AboutUs />
+      <AboutUs about_us={about_us} />
       <Benefits />
-    </StyledMainHome>
+    </main>
   );
 };
-
-const StyledMainHome = styled.main``;
