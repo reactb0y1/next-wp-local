@@ -4,14 +4,14 @@ import { Icon } from '../../atoms/Icon';
 import Image from 'next/image';
 
 export const MainFAQ = ({ acf }) => {
-  const { faq, last_item_in_faq } = acf;
+  const { faq, last_item_in_faq, banner } = acf;
 
   return (
     <StyledMainFAQ className={'main'}>
       <section className={'banner'}>
-        <h1 className={'title'}>Frequently Asked Questions</h1>
+        <h1 className={'title'}>{banner.title}</h1>
         <div className={'img-wrap'}>
-          <Image src={'/main-faq.jpg'} width={1177} height={839} />
+          <Image src={banner.background} width={1177} height={839} />
         </div>
         <Icon variant={'arrow-big'} className={'icon'} />
       </section>
