@@ -23,6 +23,7 @@ export const Header = () => {
                 src={'/logo.png'}
                 width={maxWidth450 ? 180 : 243}
                 height={maxWidth450 ? 83 : 111}
+                alt={`Logo`}
               />
             </a>
           </Link>

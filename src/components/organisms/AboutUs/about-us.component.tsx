@@ -14,7 +14,13 @@ export const AboutUs = ({ about_us }) => {
         {about_us.list.map(({ image, text }, index) => (
           <li className='item' key={index}>
             <div className='img-wrap'>
-              <Image src={image} layout={'fill'} objectFit={'contain'} className={'image'} />
+              <Image
+                src={image}
+                layout={'fill'}
+                objectFit={'contain'}
+                className={'image'}
+                alt={`About us ${index}`}
+              />
             </div>
             <div className='text' dangerouslySetInnerHTML={{ __html: text }} />
           </li>

@@ -14,12 +14,22 @@ export const DownloadApp = ({ title }: IDownloadApp) => {
       <div className='links'>
         <Link href={'#'}>
           <a>
-            <Image src={'/app-store-badge.svg'} width={300} height={109} />
+            <Image
+              src={'/app-store-badge.svg'}
+              width={300}
+              height={109}
+              alt={'Download on the App Store'}
+            />
           </a>
         </Link>
         <Link href={'#'}>
           <a>
-            <Image src={'/google-play-badge.png'} width={364} height={109} />
+            <Image
+              src={'/google-play-badge.png'}
+              width={364}
+              height={109}
+              alt={'Get it on Google Play'}
+            />
           </a>
         </Link>
       </div>

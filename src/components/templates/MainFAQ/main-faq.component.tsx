@@ -11,7 +11,7 @@ export const MainFAQ = ({ acf }) => {
       <section className={'banner'}>
         <h1 className={'title'}>{banner.title}</h1>
         <div className={'img-wrap'}>
-          <Image src={banner.background} width={1177} height={839} />
+          <Image src={banner.background} width={1177} height={839} alt={`FAQ banner`} />
         </div>
         <Icon variant={'arrow-big'} className={'icon'} />
       </section>

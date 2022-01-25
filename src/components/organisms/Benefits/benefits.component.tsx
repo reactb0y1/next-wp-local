@@ -9,7 +9,13 @@ export const Benefits = ({ benefits }) => (
       {benefits.list.map(({ image, text }, index) => (
         <li className='item' key={index}>
           <div className='img-wrap'>
-            <Image src={image} layout={'fill'} objectFit={'contain'} className={'image'} />
+            <Image
+              src={image}
+              layout={'fill'}
+              objectFit={'contain'}
+              className={'image'}
+              alt={`Benefits ${index}`}
+            />
           </div>
           <div className='text' dangerouslySetInnerHTML={{ __html: text }} />
         </li>
