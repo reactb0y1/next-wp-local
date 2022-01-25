@@ -1,25 +1,48 @@
 import React from 'react';
 import Link from 'next/link';
 import { Social } from '../../molecules/Social';
+import { useRouter } from 'next/router';
+import styled from 'styled-components';
 
 export const HeaderMenu = () => {
+  const router = useRouter();
+
   return (
     <>
-      <div className='menu'>
+      <StyledMenu className='menu'>
         <Link href={'/about'}>
-          <a>ABOUT US</a>
+          <a className={router.pathname === '/about' && 'active'}>ABOUT US</a>
         </Link>
         <Link href={'/faq'}>
-          <a>FAQs</a>
+          <a className={router.pathname === '/faq' && 'active'}>FAQs</a>
         </Link>
         <Link href={'/support'}>
-          <a>SUPPORT</a>
+          <a className={router.pathname === '/support' && 'active'}>SUPPORT</a>
         </Link>
         <Link href={'/contacts'}>
-          <a>CONTACTS</a>
+          <a className={router.pathname === '/contacts' && 'active'}>CONTACTS</a>
         </Link>
-      </div>
+      </StyledMenu>
       <Social />
     </>
   );
 };
+
+const StyledMenu = styled.div`
+  .active {
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: -31px;
+      width: calc(100% + 10px);
+      height: 8px;
+      background: #ffc107;
+      border-radius: 5px;
+      left: -5px;
+
+      @media (max-width: 1200px) {
+        bottom: -12px;
+      }
+    }
+  }
+`;
