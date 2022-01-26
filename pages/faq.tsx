@@ -1,6 +1,7 @@
 import React from 'react';
 import { MainFAQ } from '../src/components/templates/MainFAQ';
 import { Page } from '../src/components/templates/Page';
+import { fetchACF } from '../src/utils';
 
 export default function FAQ({ acf }) {
   return (
@@ -11,13 +12,12 @@ export default function FAQ({ acf }) {
 }
 
 export async function getStaticProps() {
-  const page = await fetch('http://next-wp-local/wp-json/acf/v3/pages/23');
-  const pageJSON = await page.json();
-  const acf = pageJSON.acf;
+  const { acf, acfComponents } = await fetchACF(23);
 
   return {
     props: {
       acf,
+      acfComponents
     },
   };
 }
