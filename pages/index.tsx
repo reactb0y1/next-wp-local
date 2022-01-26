@@ -4,7 +4,7 @@ import { Page } from '../src/components/templates/Page';
 
 export default function Index({ acf }) {
   return (
-    <Page title={''}>
+    <Page title={acf.page_title}>
       <MainHome acf={acf} />
     </Page>
   );

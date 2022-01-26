@@ -4,7 +4,7 @@ import { Page } from '../src/components/templates/Page';
 
 export default function FAQ({ acf }) {
   return (
-    <Page title={'FAQ'}>
+    <Page title={acf.page_title}>
       <MainFAQ acf={acf} />
     </Page>
   );
