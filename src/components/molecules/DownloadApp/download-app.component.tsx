@@ -17,9 +17,9 @@ export const DownloadApp = () => {
             <Link href={store?.components?.download?.app_store}>
               <a>
                 <Image
-                  src={'/app-store-badge.svg'}
-                  width={300}
-                  height={109}
+                  src={'/app-store-badge.png'}
+                  width={364}
+                  height={108}
                   alt={'Download on the App Store'}
                 />
               </a>
@@ -29,7 +29,7 @@ export const DownloadApp = () => {
                 <Image
                   src={'/google-play-badge.png'}
                   width={364}
-                  height={109}
+                  height={108}
                   alt={'Get it on Google Play'}
                 />
               </a>
@@ -52,5 +52,29 @@ const StyledDownloadApp = styled.div`
     display: flex;
     flex-direction: column;
     gap: 30px;
+
+    @media (max-width: 750px) {
+      a > span {
+        background: var(--c-primary) !important;
+        border-radius: 21px;
+        border: 3px solid white !important;
+
+        img {
+          transform: scale(1.08);
+        }
+      }
+    }
+  }
+
+  .footer & {
+    a > span {
+      background: var(--c-primary) !important;
+      border-radius: 21px;
+      border: 3px solid white !important;
+
+      img {
+        transform: scale(1.08);
+      }
+    }
   }
 `;
