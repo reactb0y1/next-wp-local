@@ -1,28 +1,34 @@
 import React from 'react';
 import styled from 'styled-components';
 import Image from 'next/image';
+import { useStore } from 'effector-react';
+import { $store } from '../../../stores/global/global.store';
 
-export const Benefits = ({ benefits }) => (
-  <StyledBenefits>
-    <h2 className='title'>{benefits.section_name}</h2>
-    <ul className='list'>
-      {benefits.list.map(({ image, text }, index) => (
-        <li className='item' key={index}>
-          <div className='img-wrap'>
-            <Image
-              src={image}
-              layout={'fill'}
-              objectFit={'contain'}
-              className={'image'}
-              alt={`Benefits ${index}`}
-            />
-          </div>
-          <div className='text' dangerouslySetInnerHTML={{ __html: text }} />
-        </li>
-      ))}
-    </ul>
-  </StyledBenefits>
-);
+export const Benefits = () => {
+  const store = useStore($store);
+
+  return (
+    <StyledBenefits>
+      <h2 className='title'>{store?.acf?.benefits?.section_name}</h2>
+      <ul className='list'>
+        {store?.acf?.benefits?.list?.map(({ image, text }, index) => (
+          <li className='item' key={index}>
+            <div className='img-wrap'>
+              <Image
+                src={image}
+                layout={'fill'}
+                objectFit={'contain'}
+                className={'image'}
+                alt={`Benefits ${index}`}
+              />
+            </div>
+            <div className='text' dangerouslySetInnerHTML={{ __html: text }} />
+          </li>
+        ))}
+      </ul>
+    </StyledBenefits>
+  );
+};
 
 const StyledBenefits = styled.section`
   padding-top: 70px;

@@ -11,7 +11,7 @@ export default function Index(props) {
 
   return (
     <Page>
-      <MainHome acf={props.acf} />
+      <MainHome />
     </Page>
   );
 }

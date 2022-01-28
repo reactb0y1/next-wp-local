@@ -1,15 +1,24 @@
 import React from 'react';
 import styled from 'styled-components';
 import { DownloadApp } from '../../molecules/DownloadApp';
+import { useStore } from 'effector-react';
+import { $store } from '../../../stores/global/global.store';
 
-export const Banner = ({ banner }) => (
-  <StyledBanner className={'banner'} style={{ backgroundImage: `url('${banner.background}')` }}>
-    <div className='container'>
-      <h1 className={'title'}>{banner.title}</h1>
-      <DownloadApp />
-    </div>
-  </StyledBanner>
-);
+export const Banner = () => {
+  const store = useStore($store);
+
+  return (
+    <StyledBanner
+      className={'banner'}
+      style={{ backgroundImage: `url('${store?.acf?.banner?.background}')` }}
+    >
+      <div className='container'>
+        <h1 className={'title'}>{store?.acf?.banner?.title}</h1>
+        <DownloadApp />
+      </div>
+    </StyledBanner>
+  );
+};
 
 const StyledBanner = styled.section`
   max-height: max(1020px, 100vh);

@@ -1,17 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
 import Image from 'next/image';
+import { useStore } from 'effector-react';
+import { $store } from '../../../stores/global/global.store';
 
-export const AboutUs = ({ about_us }) => {
+export const AboutUs = () => {
+  const store = useStore($store);
+
   return (
     <StyledAboutUs>
       <div className='head'>
-        <h2 className='title'>{about_us.header.section_name}</h2>
-        <h3 className='sub-title'>{about_us.header.title}</h3>
+        <h2 className='title'>{store?.acf?.about_us?.header?.section_name}</h2>
+        <h3 className='sub-title'>{store?.acf?.about_us?.header?.title}</h3>
       </div>
 
       <ul className='list'>
-        {about_us.list.map(({ image, text }, index) => (
+        {store?.acf?.about_us?.list?.map(({ image, text }, index) => (
           <li className='item' key={index}>
             <div className='img-wrap'>
               <Image
