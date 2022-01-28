@@ -17,12 +17,13 @@ export default function Index(props) {
 }
 
 export async function getStaticProps() {
-  const { page, components } = await fetchACF(21);
+  const { page, components, menu } = await fetchACF(21);
 
   return {
     props: {
       page,
       components,
+      menu,
     },
   };
 }

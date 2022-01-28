@@ -7,5 +7,8 @@ export const fetchACF = async (pageID) => {
   const componentsJSON = await componentsData.json();
   const components = componentsJSON.acf;
 
-  return { page, components };
+  const menuData = await fetch('http://next-wp-local/wp-json/menus/v1/menus/header-menu');
+  const menu = await menuData.json();
+
+  return { page, components, menu };
 };

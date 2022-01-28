@@ -3,25 +3,21 @@ import Link from 'next/link';
 import { Social } from '../../molecules/Social';
 import { useRouter } from 'next/router';
 import styled from 'styled-components';
+import { useStore } from 'effector-react';
+import { $store } from '../../../stores/global/global.store';
 
 export const HeaderMenu = () => {
   const router = useRouter();
+  const store = useStore($store);
 
   return (
     <>
       <StyledMenu className='menu'>
-        <Link href={'/about'}>
-          <a className={router.pathname === '/about' ? 'active' : ''}>ABOUT US</a>
-        </Link>
-        <Link href={'/faq'}>
-          <a className={router.pathname === '/faq' ? 'active' : ''}>FAQs</a>
-        </Link>
-        <Link href={'/support'}>
-          <a className={router.pathname === '/support' ? 'active' : ''}>SUPPORT</a>
-        </Link>
-        <Link href={'/contacts'}>
-          <a className={router.pathname === '/contacts' ? 'active' : ''}>CONTACTS</a>
-        </Link>
+        {store?.menu?.items?.map(({ title, url }) => (
+          <Link href={url} key={url}>
+            <a className={router.pathname === url ? 'active' : ''}>{title}</a>
+          </Link>
+        ))}
       </StyledMenu>
       <Social />
     </>
