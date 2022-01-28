@@ -13,7 +13,7 @@ export const HeaderMenu = () => {
   return (
     <>
       <StyledMenu className='menu'>
-        {store?.menu?.items?.map(({ title, url }) => (
+        {store?.menu?.menuHeader?.items?.map(({ title, url }) => (
           <Link href={url} key={url}>
             <a className={router.pathname === url ? 'active' : ''}>{title}</a>
           </Link>

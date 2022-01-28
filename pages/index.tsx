@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { MainHome } from '../src/components/templates/MainHome';
 import { Page } from '../src/components/templates/Page';
-import { fetchACF } from '../src/utils';
+import { fetchData } from '../src/utils';
 import { setStoreEv } from '../src/stores/global/global.store';
 
 export default function Index(props) {
@@ -17,7 +17,7 @@ export default function Index(props) {
 }
 
 export async function getStaticProps() {
-  const props = await fetchACF(21);
+  const props = await fetchData(21);
 
   return { props };
 }
