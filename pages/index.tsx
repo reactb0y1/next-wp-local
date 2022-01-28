@@ -10,7 +10,7 @@ export default function Index(props) {
   }, []);
 
   return (
-    <Page title={props.acf.page_title}>
+    <Page>
       <MainHome acf={props.acf} />
     </Page>
   );

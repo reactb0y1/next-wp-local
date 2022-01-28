@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { MainFAQ } from '../src/components/templates/MainFAQ';
 import { Page } from '../src/components/templates/Page';
 import { fetchACF } from '../src/utils';
+import { setStoreEv } from '../src/stores/global/global.store';
 
-export default function FAQ({ acf }) {
+export default function FAQ(props) {
+  useEffect(() => {
+    setStoreEv(props);
+  }, []);
+
   return (
-    <Page title={acf.page_title}>
-      <MainFAQ acf={acf} />
+    <Page>
+      <MainFAQ acf={props.acf} />
     </Page>
   );
 }
@@ -17,7 +22,7 @@ export async function getStaticProps() {
   return {
     props: {
       acf,
-      acfComponents
+      acfComponents,
     },
   };
 }
