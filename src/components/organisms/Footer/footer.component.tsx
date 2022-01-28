@@ -9,7 +9,7 @@ export const Footer = () => {
   return (
     <StyledFooter className={'footer'}>
       <div className='container'>
-        <DownloadApp title={'Download the “Givvy” app'} />
+        <DownloadApp />
         <ul className='menu'>
           <li>
             <Link href={'#'}>
@@ -46,7 +46,7 @@ export const Footer = () => {
           </li>
         </ul>
         <Subscribe />
-        <Social title={'Social Media'} />
+        <Social />
         <p className='copyright'>© GIVVY 2022</p>
       </div>
     </StyledFooter>

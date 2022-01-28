@@ -2,42 +2,52 @@ import React from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useStore } from 'effector-react';
+import { $store } from '../../../stores/global/global.store';
 
-interface IDownloadApp {
-  title?: string;
-}
+export const DownloadApp = () => {
+  const store = useStore($store);
 
-export const DownloadApp = ({ title }: IDownloadApp) => {
   return (
     <StyledDownloadApp className={'download-app'}>
-      {title && <p className={'title'}>{title}</p>}
+      <p className={'title'}>{store?.components?.download?.title}</p>
       <div className='links'>
-        <Link href={'#'}>
-          <a>
-            <Image
-              src={'/app-store-badge.svg'}
-              width={300}
-              height={109}
-              alt={'Download on the App Store'}
-            />
-          </a>
-        </Link>
-        <Link href={'#'}>
-          <a>
-            <Image
-              src={'/google-play-badge.png'}
-              width={364}
-              height={109}
-              alt={'Get it on Google Play'}
-            />
-          </a>
-        </Link>
+        {store?.components?.download && (
+          <>
+            <Link href={store?.components?.download?.app_store}>
+              <a>
+                <Image
+                  src={'/app-store-badge.svg'}
+                  width={300}
+                  height={109}
+                  alt={'Download on the App Store'}
+                />
+              </a>
+            </Link>
+            <Link href={store?.components?.download?.google_play}>
+              <a>
+                <Image
+                  src={'/google-play-badge.png'}
+                  width={364}
+                  height={109}
+                  alt={'Get it on Google Play'}
+                />
+              </a>
+            </Link>
+          </>
+        )}
       </div>
     </StyledDownloadApp>
   );
 };
 
 const StyledDownloadApp = styled.div`
+  .title {
+    .banner & {
+      display: none;
+    }
+  }
+
   .links {
     display: flex;
     flex-direction: column;
