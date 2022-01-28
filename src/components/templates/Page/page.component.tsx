@@ -15,7 +15,7 @@ export const Page = ({ children }) => {
           Givvi landing
           {store?.page?.page_title ? ` | ${store?.page?.page_title}` : ''}
         </title>
-        <link rel='icon' href='/favicon.svg' />
+        <link rel='icon' href={store?.components?.logo_favicon?.favicon} />
       </Head>
 
       <div className={'global-wrap'}>

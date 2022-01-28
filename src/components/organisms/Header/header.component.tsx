@@ -6,12 +6,15 @@ import { HeaderMenu } from './header-menu.component';
 import { HamburgerCollapse } from 'react-animated-burgers';
 import { useMediaQuery } from 'react-responsive';
 import { slide as Menu } from 'react-burger-menu';
+import { useStore } from 'effector-react';
+import { $store } from '../../../stores/global/global.store';
 
 export const Header = () => {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
   const toggleButton = useCallback(() => setMenuIsOpen((prevState) => !prevState), []);
   const maxWidth1200 = useMediaQuery({ query: '(max-width: 1200px)' });
   const maxWidth450 = useMediaQuery({ query: '(max-width: 450px)' });
+  const store = useStore($store);
 
   return (
     <StyledHeader className={'header'}>
@@ -19,12 +22,14 @@ export const Header = () => {
         <div className='logo'>
           <Link href={'/'}>
             <a>
-              <Image
-                src={'/logo.png'}
-                width={maxWidth450 ? 180 : 243}
-                height={maxWidth450 ? 83 : 111}
-                alt={`Logo`}
-              />
+              {store?.components?.logo_favicon && (
+                <Image
+                  src={store?.components?.logo_favicon?.logo}
+                  width={maxWidth450 ? 180 : 243}
+                  height={maxWidth450 ? 83 : 111}
+                  alt={`Logo`}
+                />
+              )}
             </a>
           </Link>
         </div>
