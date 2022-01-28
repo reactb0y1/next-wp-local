@@ -28,21 +28,31 @@ export const Social = () => {
 };
 
 const StyledSocial = styled.div`
-  .title {
-    .header & {
-      display: none;
-    }
-  }
-
   .links {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 29px;
 
     a {
       display: flex;
       fill: var(--c-primary);
+    }
+  }
+
+  .header & {
+    .title {
+      display: none;
+    }
+    .links {
+      gap: 21px;
+    }
+  }
+
+  .footer & {
+    .links {
+      width: 148px;
+      transform: translate(-10px, -3px);
+      gap: 13px;
     }
   }
 `;

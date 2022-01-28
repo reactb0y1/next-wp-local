@@ -25,6 +25,8 @@ export const HeaderMenu = () => {
 };
 
 const StyledMenu = styled.div`
+  margin-left: 80px;
+
   .active {
     &:before {
       content: '';
@@ -40,5 +42,9 @@ const StyledMenu = styled.div`
         bottom: -12px;
       }
     }
+  }
+
+  @media (max-width: 1400px) {
+    margin-left: 0;
   }
 `;

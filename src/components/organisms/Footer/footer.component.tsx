@@ -144,10 +144,6 @@ const StyledFooter = styled.footer`
       }
     }
 
-    .links {
-      width: 130px;
-    }
-
     @media (max-width: 750px) {
       grid-area: initial;
       margin: 0;
