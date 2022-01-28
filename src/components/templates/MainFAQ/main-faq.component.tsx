@@ -2,22 +2,26 @@ import React from 'react';
 import styled from 'styled-components';
 import { Icon } from '../../atoms/Icon';
 import Image from 'next/image';
+import { useStore } from 'effector-react';
+import { $store } from '../../../stores/global/global.store';
 
-export const MainFAQ = ({ acf }) => {
-  const { faq, last_item_in_faq, banner } = acf;
+export const MainFAQ = () => {
+  const store = useStore($store);
 
   return (
     <StyledMainFAQ className={'main'}>
       <section className={'banner'}>
-        <h1 className={'title'}>{banner.title}</h1>
+        <h1 className={'title'}>{store?.acf?.banner?.title}</h1>
         <div className={'img-wrap'}>
-          <Image src={banner.background} width={1177} height={839} alt={`FAQ banner`} />
+          {store?.acf?.banner?.background && (
+            <Image src={store.acf.banner.background} width={1177} height={839} alt={`FAQ banner`} />
+          )}
         </div>
         <Icon variant={'arrow-big'} className={'icon'} />
       </section>
       <section className='list-section'>
         <ul className='list'>
-          {faq.map(({ title, question, answer }, index) => (
+          {store?.acf?.faq?.map(({ title, question, answer }, index) => (
             <li className={'item'} key={index}>
               <p className='title'>{title}</p>
               <div className='content'>
@@ -27,11 +31,11 @@ export const MainFAQ = ({ acf }) => {
             </li>
           ))}
           <li className={'item'}>
-            <p className='title'>{last_item_in_faq.title}</p>
+            <p className='title'>{store?.acf?.last_item_in_faq?.title}</p>
             <div className='content'>
-              <h2 className='question'>{last_item_in_faq.question}</h2>
-              <a href={`mailto:${last_item_in_faq.email}`} className='answer'>
-                {last_item_in_faq.email}
+              <h2 className='question'>{store?.acf?.last_item_in_faq?.question}</h2>
+              <a href={`mailto:${store?.acf?.last_item_in_faq?.email}`} className='answer'>
+                {store?.acf?.last_item_in_faq?.email}
               </a>
             </div>
           </li>

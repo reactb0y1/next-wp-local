@@ -11,7 +11,7 @@ export default function FAQ(props) {
 
   return (
     <Page>
-      <MainFAQ acf={props.acf} />
+      <MainFAQ />
     </Page>
   );
 }
