@@ -47,7 +47,7 @@ export const Footer = () => {
         </ul>
         <Subscribe />
         <Social />
-        <p className='copyright'>© GIVVY 2022</p>
+        <p className='copyright'>© GIVVY {new Date().getFullYear()}</p>
       </div>
     </StyledFooter>
   );
