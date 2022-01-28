@@ -9,9 +9,9 @@ export const Benefits = () => {
 
   return (
     <StyledBenefits>
-      <h2 className='title'>{store?.acf?.benefits?.section_name}</h2>
+      <h2 className='title'>{store?.page?.benefits?.section_name}</h2>
       <ul className='list'>
-        {store?.acf?.benefits?.list?.map(({ image, text }, index) => (
+        {store?.page?.benefits?.list?.map(({ image, text }, index) => (
           <li className='item' key={index}>
             <div className='img-wrap'>
               <Image

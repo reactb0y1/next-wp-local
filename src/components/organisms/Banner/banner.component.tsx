@@ -10,10 +10,10 @@ export const Banner = () => {
   return (
     <StyledBanner
       className={'banner'}
-      style={{ backgroundImage: `url('${store?.acf?.banner?.background}')` }}
+      style={{ backgroundImage: `url('${store?.page?.banner?.background}')` }}
     >
       <div className='container'>
-        <h1 className={'title'}>{store?.acf?.banner?.title}</h1>
+        <h1 className={'title'}>{store?.page?.banner?.title}</h1>
         <DownloadApp />
       </div>
     </StyledBanner>

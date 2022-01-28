@@ -13,10 +13,7 @@ export const Page = ({ children }) => {
       <Head>
         <title>
           Givvi landing
-          {
-            // @ts-ignore
-            store?.acf?.page_title ? ` | ${store?.acf?.page_title}` : ''
-          }
+          {store?.page?.page_title ? ` | ${store?.page?.page_title}` : ''}
         </title>
         <link rel='icon' href='/favicon.svg' />
       </Head>

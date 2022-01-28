@@ -1,11 +1,11 @@
 export const fetchACF = async (pageID) => {
-  const page = await fetch(`http://next-wp-local/wp-json/acf/v3/pages/${pageID}`);
-  const pageJSON = await page.json();
-  const acf = pageJSON.acf;
+  const pageData = await fetch(`http://next-wp-local/wp-json/acf/v3/pages/${pageID}`);
+  const pageJSON = await pageData.json();
+  const page = pageJSON.acf;
 
-  const components = await fetch('http://next-wp-local/wp-json/acf/v3/pages/84');
-  const componentsJSON = await components.json();
-  const acfComponents = componentsJSON.acf;
+  const componentsData = await fetch('http://next-wp-local/wp-json/acf/v3/pages/84');
+  const componentsJSON = await componentsData.json();
+  const components = componentsJSON.acf;
 
-  return { acf, acfComponents };
+  return { page, components };
 };

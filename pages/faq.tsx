@@ -17,12 +17,12 @@ export default function FAQ(props) {
 }
 
 export async function getStaticProps() {
-  const { acf, acfComponents } = await fetchACF(23);
+  const { page, components } = await fetchACF(23);
 
   return {
     props: {
-      acf,
-      acfComponents,
+      page,
+      components,
     },
   };
 }

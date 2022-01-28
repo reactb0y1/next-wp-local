@@ -10,12 +10,12 @@ export const AboutUs = () => {
   return (
     <StyledAboutUs>
       <div className='head'>
-        <h2 className='title'>{store?.acf?.about_us?.header?.section_name}</h2>
-        <h3 className='sub-title'>{store?.acf?.about_us?.header?.title}</h3>
+        <h2 className='title'>{store?.page?.about_us?.header?.section_name}</h2>
+        <h3 className='sub-title'>{store?.page?.about_us?.header?.title}</h3>
       </div>
 
       <ul className='list'>
-        {store?.acf?.about_us?.list?.map(({ image, text }, index) => (
+        {store?.page?.about_us?.list?.map(({ image, text }, index) => (
           <li className='item' key={index}>
             <div className='img-wrap'>
               <Image
