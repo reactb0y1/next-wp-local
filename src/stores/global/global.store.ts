@@ -1,6 +1,6 @@
 import { createApi, createEvent, createStore, forward } from 'effector';
 
-const $store: any = createStore({});
+const $store = createStore<any>({});
 
 const { setStore } = createApi($store, {
   setStore: (store: any, payload: any) => {
