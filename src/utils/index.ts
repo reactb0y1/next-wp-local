@@ -3,7 +3,7 @@ export const fetchData = async (pageID) => {
   const pageJSON = await pageData.json();
   const page = pageJSON.acf;
 
-  const componentsData = await fetch('http://next-wp-local/wp-json/acf/v3/pages/84');
+  const componentsData = await fetch('http://next-wp-local/wp-json/acf/v3/options/options');
   const componentsJSON = await componentsData.json();
   const components = componentsJSON.acf;
 
