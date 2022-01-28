@@ -17,13 +17,7 @@ export default function FAQ(props) {
 }
 
 export async function getStaticProps() {
-  const { page, components, menu } = await fetchACF(23);
+  const props = await fetchACF(23);
 
-  return {
-    props: {
-      page,
-      components,
-      menu,
-    },
-  };
+  return { props };
 }
