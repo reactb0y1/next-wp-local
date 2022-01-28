@@ -24,8 +24,8 @@ export const FooterMenu = () => {
           )}
           {title === 'Contacts' && (
             <div className='sub-menu'>
-              <Link href={'#'}>
-                <a>info@givvy.com</a>
+              <Link href={`mailto:${store?.components?.footer?.email}`}>
+                <a>{store?.components?.footer?.email}</a>
               </Link>
             </div>
           )}
