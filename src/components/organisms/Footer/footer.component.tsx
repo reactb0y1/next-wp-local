@@ -2,49 +2,15 @@ import React from 'react';
 import styled from 'styled-components';
 import { DownloadApp } from '../../molecules/DownloadApp';
 import { Social } from '../../molecules/Social';
-import Link from 'next/link';
 import { Subscribe } from '../../molecules/Subscribe';
+import { FooterMenu } from './footer-menu.component';
 
 export const Footer = () => {
   return (
     <StyledFooter className={'footer'}>
       <div className='container'>
         <DownloadApp />
-        <ul className='menu'>
-          <li>
-            <Link href={'#'}>
-              <a>About Us</a>
-            </Link>
-          </li>
-          <li>
-            <Link href={'#'}>
-              <a>Support</a>
-            </Link>
-            <div className='sub-menu'>
-              <Link href={'#'}>
-                <a>Terms of Use</a>
-              </Link>
-              <Link href={'#'}>
-                <a>Privacy Policy</a>
-              </Link>
-            </div>
-          </li>
-          <li>
-            <Link href={'#'}>
-              <a>FAQs</a>
-            </Link>
-          </li>
-          <li>
-            <Link href={'#'}>
-              <a>Contacts</a>
-            </Link>
-            <div className='sub-menu'>
-              <Link href={'#'}>
-                <a>info@givvy.com</a>
-              </Link>
-            </div>
-          </li>
-        </ul>
+        <FooterMenu />
         <Subscribe />
         <Social />
         <p className='copyright'>© GIVVY {new Date().getFullYear()}</p>
