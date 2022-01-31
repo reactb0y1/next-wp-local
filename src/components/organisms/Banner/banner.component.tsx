@@ -21,7 +21,8 @@ export const Banner = () => {
 };
 
 const StyledBanner = styled.section`
-  max-height: max(1020px, 100vh);
+  height: clamp(600px, 100vh, 1020px);
+  box-sizing: content-box;
   padding-top: 50px;
   padding-bottom: 50px;
   background-position: center;
