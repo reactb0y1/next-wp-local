@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { DownloadApp } from '../../molecules/DownloadApp';
 import { useStore } from 'effector-react';
 import { $store } from '../../../stores/global/global.store';
+import {Counter} from "../../molecules/Counter";
 
 export const Banner = () => {
   const store = useStore($store);
@@ -15,6 +16,7 @@ export const Banner = () => {
       <div className='container'>
         <h1 className={'title'}>{store?.page?.banner?.title}</h1>
         <DownloadApp />
+        <Counter/>
       </div>
     </StyledBanner>
   );
