@@ -35,7 +35,7 @@ const Styled404 = styled.main`
 `;
 
 export async function getStaticProps() {
-  const props = await fetchData(21);
+  const props = await fetchData(12);
 
   return { props };
 }

@@ -17,7 +17,7 @@ export default function Index(props) {
 }
 
 export async function getStaticProps() {
-  const props = await fetchData(21);
+  const props = await fetchData(12);
 
   return { props };
 }

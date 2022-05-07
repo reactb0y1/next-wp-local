@@ -17,7 +17,7 @@ export default function FAQ(props) {
 }
 
 export async function getStaticProps() {
-  const props = await fetchData(23);
+  const props = await fetchData(27);
 
   return { props };
 }
