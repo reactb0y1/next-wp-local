@@ -3,12 +3,12 @@ import Link from 'next/link';
 import { Social } from '../../molecules/Social';
 import { useRouter } from 'next/router';
 import styled from 'styled-components';
-import { useStore } from 'effector-react';
-import { $store } from '../../../stores/global/global.store';
+import {useSelector} from "react-redux";
 
 export const HeaderMenu = () => {
   const router = useRouter();
-  const store = useStore($store);
+  // @ts-ignore
+    const store = useSelector(store => store.globalStore);
 
   return (
     <>

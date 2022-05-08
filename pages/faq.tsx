@@ -2,11 +2,13 @@ import React, { useEffect } from 'react';
 import { MainFAQ } from '../src/components/templates/MainFAQ';
 import { Page } from '../src/components/templates/Page';
 import { fetchData } from '../src/utils';
-import { setStoreEv } from '../src/stores/global/global.store';
+import {useDispatch} from "react-redux";
 
 export default function FAQ(props) {
+  const dispatch = useDispatch();
+
   useEffect(() => {
-    setStoreEv(props);
+    dispatch({type: 'SET_STORE', payload: props})
   }, []);
 
   return (

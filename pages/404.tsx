@@ -1,12 +1,14 @@
 import React, { useEffect } from 'react';
 import { Page } from '../src/components/templates/Page';
-import { setStoreEv } from '../src/stores/global/global.store';
 import { fetchData } from '../src/utils';
 import styled from 'styled-components';
+import {useDispatch} from "react-redux";
 
 export default function Page404(props) {
+  const dispatch = useDispatch();
+
   useEffect(() => {
-    setStoreEv(props);
+    dispatch({type: 'SET_STORE', payload: props})
   }, []);
 
   return (

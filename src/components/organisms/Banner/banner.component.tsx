@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import { DownloadApp } from '../../molecules/DownloadApp';
-import { useStore } from 'effector-react';
-import { $store } from '../../../stores/global/global.store';
 import {Counter} from "../../molecules/Counter";
+import {useSelector} from "react-redux";
 
 export const Banner = () => {
-  const store = useStore($store);
+  // @ts-ignore
+  const store = useSelector(state => state.globalStore);
 
   return (
     <StyledBanner

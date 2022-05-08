@@ -1,10 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
-import { useStore } from 'effector-react';
-import { $store } from '../../../stores/global/global.store';
+import {useSelector} from "react-redux";
 
 export const FooterMenu = () => {
-  const store = useStore($store);
+  // @ts-ignore
+  const store = useSelector(store => store.globalStore);
 
   return (
     <ul className='menu'>

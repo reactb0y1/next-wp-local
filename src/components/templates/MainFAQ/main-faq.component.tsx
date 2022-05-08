@@ -2,11 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import { Icon } from '../../atoms/Icon';
 import Image from 'next/image';
-import { useStore } from 'effector-react';
-import { $store } from '../../../stores/global/global.store';
+import {useSelector} from "react-redux";
 
 export const MainFAQ = () => {
-  const store = useStore($store);
+  // @ts-ignore
+  const store = useSelector(store => store.globalStore);
 
   return (
     <StyledMainFAQ className={'main'}>

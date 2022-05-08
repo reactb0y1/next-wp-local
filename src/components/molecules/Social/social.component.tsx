@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
-import { useStore } from 'effector-react';
-import { $store } from '../../../stores/global/global.store';
+import {useSelector} from "react-redux";
 import Image from 'next/image';
 
 export const Social = () => {
-  const store = useStore($store);
+    // @ts-ignore
+    const store = useSelector(store => store.globalStore);
 
   return (
     <StyledSocial className={'social'}>

@@ -1,20 +1,20 @@
-import React, { useCallback, useState } from 'react';
+import React, {useCallback, useState} from 'react';
 import styled from 'styled-components';
 import Image from 'next/image';
 import Link from 'next/link';
-import { HeaderMenu } from './header-menu.component';
-import { HamburgerCollapse } from 'react-animated-burgers';
-import { useMediaQuery } from 'react-responsive';
-import { slide as Menu } from 'react-burger-menu';
-import { useStore } from 'effector-react';
-import { $store } from '../../../stores/global/global.store';
+import {HeaderMenu} from './header-menu.component';
+import {HamburgerCollapse} from 'react-animated-burgers';
+import {useMediaQuery} from 'react-responsive';
+import {slide as Menu} from 'react-burger-menu';
+import {useSelector} from "react-redux";
 
 export const Header = () => {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
   const toggleButton = useCallback(() => setMenuIsOpen((prevState) => !prevState), []);
   const maxWidth1200 = useMediaQuery({ query: '(max-width: 1200px)' });
   const maxWidth450 = useMediaQuery({ query: '(max-width: 450px)' });
-  const store = useStore($store);
+  // @ts-ignore
+  const store = useSelector(store => store.globalStore);
 
   return (
     <StyledHeader className={'header'}>

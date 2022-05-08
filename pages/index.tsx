@@ -2,11 +2,13 @@ import React, { useEffect } from 'react';
 import { MainHome } from '../src/components/templates/MainHome';
 import { Page } from '../src/components/templates/Page';
 import { fetchData } from '../src/utils';
-import { setStoreEv } from '../src/stores/global/global.store';
+import {useDispatch} from "react-redux";
 
 export default function Index(props) {
+  const dispatch = useDispatch();
+
   useEffect(() => {
-    setStoreEv(props);
+    dispatch({type: 'SET_STORE', payload: props })
   }, []);
 
   return (
